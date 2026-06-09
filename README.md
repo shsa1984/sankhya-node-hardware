@@ -54,7 +54,9 @@ The firmware handles register-map differences per sensor family. See the [Sankhy
 
 ## Firmware
 
-Firmware is **not** included in this repository. Nodes ship blank and are flashed via the Web Serial flasher at [flash.sankhyafarms.com](https://flash.sankhyafarms.com) after device registration. This pairs each board to a customer account and the Sankhya Intelligence backend.
+**Reference firmware (open-source).** An Apache-2.0 reference implementation is now included in the [`firmware/`](./firmware/) folder. It demonstrates standalone operation of the v4 carrier board: powering the sensor terminal, reading any RS-485 Modbus soil sensor, and printing values over USB-C serial. This is intentionally minimal — no cloud connectivity, no proprietary logic — and serves as documentation for the open-hardware certification.
+
+**Production firmware.** Nodes running the Sankhya Farms platform use separate proprietary firmware that integrates with our cloud backend. That firmware is outside the scope of this open-hardware project. To connect a board to Sankhya Intelligence, register at [sankhyafarms.com](https://sankhyafarms.com), and nodes are provisioned via the Web Serial flasher at [flash.sankhyafarms.com](https://flash.sankhyafarms.com).
 
 ## Positioning
 
